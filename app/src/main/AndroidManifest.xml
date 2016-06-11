@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.marvelcomics">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/marvel_app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".utility.Splash"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_splash"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".characters.Dashboard">
+            <intent-filter>
+                <action android:name="com.marvelcomics.characters.Dashboad" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".comics.Comics"
+            android:label="@string/title_activity_comics"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.marvelcomics.comics.Comics" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".strips.SingleComic"
+            android:label="@string/title_activity_single_comic"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.marvelcomics.strips.SingleComics" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".utility.WebViewer"
+            android:label="@string/title_activity_web_view"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.marvelcomics.utility.WebViewer" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
